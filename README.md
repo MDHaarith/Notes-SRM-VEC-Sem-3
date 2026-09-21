@@ -34,7 +34,13 @@ You don't need to install git. You learn git by doing this:
 
 That's it. A maintainer approves and your notes go live. What you just did _is_ git: commit = save point, pull request = "please add my save".
 
-Full walkthrough with pictures-talk: see [LEARN-GIT.md](LEARN-GIT.md).
+## What you (classmate) need to do
+
+1. **One-time setup (10 min):** install Python (gives you `pip`) + Git, then tell git your name. Full copy-paste steps for Windows + Mac: [LEARN-GIT.md Part 0](LEARN-GIT.md#part-0--one-time-setup-windows--mac).
+2. **Upload notes (2 min, browser only):** open subject folder → `notes/` → **Add file → Upload files** → write message like `Add Unit 2 notes - EC3363` → **Propose changes** → **Create pull request**. With screenshots: [LEARN-GIT.md Part 1](LEARN-GIT.md#part-1--upload-notes-browser-only-no-terminal).
+3. **Optional terminal way:** `git clone → add file → git add → git commit → git push → pull request`. Same guide: [LEARN-GIT.md Part 2](LEARN-GIT.md#part-2--same-thing-in-the-terminal-only-when-curious).
+
+Terminal copy-paste survival kit: Windows PowerShell paste = `Ctrl + V` or right-click (copy out = `Ctrl + Shift + C`); Git Bash paste = right-click → Paste; Mac Terminal = `Cmd + C` / `Cmd + V`; press **Enter** after pasting a command. Details in the guide.
 
 ## Rules (keep it usable)
 
