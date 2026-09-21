@@ -1,0 +1,18 @@
+# Never commit secrets or junk. Classmates upload via web UI and
+# your existing "College PDFs" folder has live Google OAuth keys in it.
+client_secret*.json
+*client_secret*.json
+.env
+.env.*
+*.key
+*.pem
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.tmp
+~$*
+
+# Python / node junk (in case someone adds scripts later)
+__pycache__/
+node_modules/
