@@ -36,23 +36,32 @@ You can also click **Clone Repository** on the Welcome / Source Control screen a
 
 ![VS Code clone repository picker](images/vscode-clone-repo.png)
 
-**2. Add your file.** Drag your notes file into the subject folder, e.g. `EC3363-Signals-Systems/notes/`. Name it `Unit-<n>-<topic>-<your-name>.md` (PDFs are fine too).
+After the first time, just open that folder in VS Code — no need to clone again.
 
-**3. Commit.** Open **Source Control** (`Ctrl+Shift+G`), type a message like `Add Unit 2 notes - EC3363`, and click **Commit**.
+**2. Update first.** Always get the newest copy before you add anything. Open **Source Control** and click **Sync Changes** (this pulls classmates' notes and pushes yours). This is what keeps the repo up to date and avoids merge conflicts.
+
+![VS Code sync button](images/vscode-sync.png)
+
+**3. Add your file.** Drag your notes file into the subject folder, e.g. `EC3363-Signals-Systems/notes/`. Name it `Unit-<n>-<topic>-<your-name>.md` (PDFs are fine too).
+
+**4. Commit.** In **Source Control** (`Ctrl+Shift+G`), type a message like `Add Unit 2 notes - EC3363`, and click **Commit**.
 
 ![VS Code Source Control view](images/vscode-source-control.png)
 
-**4. Push.** Click **Sync Changes**.
+**5. Push.** Click **Sync Changes** (or **Push**).
 
 Done. `add` = pick your file, `commit` = save it with a message, `push` = send it to GitHub.
+
+**Avoiding conflicts:** update before you start, commit in small steps, and push as soon as you commit. If two people edit the same file, VS Code shows the clash and lets you pick **Accept Incoming** or **Accept Current** — never keep both copies of the same file. Tip: don't edit a file someone else is working on; add your own file instead.
 
 ## On a phone
 
 VS Code doesn't run on phones, so upload in the browser. The GitHub app can't add files — use **Chrome/Safari → github.com** instead.
 
 1. Open the repo, go into the subject folder, then `notes/`.
-2. Tap **Add file → Upload files** (or **Create new file** to type a note).
-3. Pick your file, write a message, tap **Commit changes**.
+2. Refresh the page first so you see the newest files (mobile GitHub sometimes shows an old copy).
+3. Tap **Add file → Upload files** (or **Create new file** to type a note).
+4. Pick your file, write a message, tap **Commit changes**.
 
 ![GitHub Add file button](images/github-add-file.png)
 
