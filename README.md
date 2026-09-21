@@ -3,6 +3,8 @@
 Class notes for Sem 3, ECE (R2023) — SRM Valliammai.
 For classmates, by classmates.
 
+This repo is **public** — anyone can read it. To add notes, open a **pull request**; only the maintainer merges.
+
 ## Subjects
 
 | Code | Subject | Folder |
@@ -27,9 +29,10 @@ Both are accepted. PDFs use exactly the same add → commit → push steps, in V
 
 ## Setup (once)
 
-1. **Git** — install from [git-scm.com/downloads](https://git-scm.com/downloads).
-2. **VS Code** — install from [code.visualstudio.com](https://code.visualstudio.com/).
-3. **Sign in to GitHub in VS Code** — click the Accounts icon (bottom-left), choose *Sign in with GitHub*, and finish in the browser that opens.
+1. **GitHub account** — create a free one at [github.com/signup](https://github.com/signup) and tell the maintainer your username so you can be added as a collaborator.
+2. **Git** — install from [git-scm.com/downloads](https://git-scm.com/downloads).
+3. **VS Code** — install from [code.visualstudio.com](https://code.visualstudio.com/).
+4. **Sign in to GitHub in VS Code** — click the Accounts icon (bottom-left), choose *Sign in with GitHub*, and finish in the browser that opens.
 
 ![VS Code prompting to sign in to GitHub](images/vscode-github-signin.png)
 
@@ -45,21 +48,29 @@ You can also click **Clone Repository** on the Welcome / Source Control screen a
 
 After the first time, just open that folder in VS Code — no need to clone again.
 
-**2. Update first.** Always get the newest copy before you add anything. Open **Source Control** and click **Sync Changes** (this pulls classmates' notes and pushes yours). This is what keeps the repo up to date and avoids merge conflicts.
+**2. Update first.** Always get the newest copy before you add anything. Open **Source Control** and click **Sync Changes**. This keeps you current and avoids merge conflicts.
 
 ![VS Code sync button](images/vscode-sync.png)
 
-**3. Add your file.** Drag your notes file into the subject folder, e.g. `EC3363-Signals-Systems/notes/`. Name it `Unit-<n>-<topic>-<your-name>.md` or `...-<your-name>.pdf` — both are accepted.
+**3. Make your own branch.** Click the branch name in the bottom-left status bar → **Create new branch** → name it after you (e.g. `rahul`). Never work directly on `main` — it's protected, so your push will be rejected.
 
-**4. Commit.** In **Source Control** (`Ctrl+Shift+G`), type a message like `Add Unit 2 notes - EC3363`, and click **Commit**.
+**4. Add your file.** Drag your notes file into the subject folder, e.g. `EC3363-Signals-Systems/notes/`. Name it `Unit-<n>-<topic>-<your-name>.md` or `...-<your-name>.pdf` — both are accepted.
+
+**5. Commit.** In **Source Control** (`Ctrl+Shift+G`), type a message like `Add Unit 2 notes - EC3363`, and click **Commit**.
 
 ![VS Code Source Control view](images/vscode-source-control.png)
 
-**5. Push.** Click **Sync Changes** (or **Push**).
+**6. Push your branch.** Click **Publish Branch** (or **Sync Changes**).
 
-Done. `add` = pick your file, `commit` = save it with a message, `push` = send it to GitHub.
+**7. Open a pull request.** On GitHub, click **Compare & pull request** → **Create pull request**.
 
-**Avoiding conflicts:** update before you start, commit in small steps, and push as soon as you commit. If two people edit the same file, VS Code shows the clash and lets you pick **Accept Incoming** or **Accept Current** — never keep both copies of the same file. Tip: don't edit a file someone else is working on; add your own file instead.
+![GitHub Compare & pull request banner](images/github-compare-pr.png)
+
+**8. The maintainer merges.** Nothing goes into `main` until the maintainer approves and merges your pull request. That's the rule — reads are open, merges are theirs.
+
+`add` = pick your file, `commit` = save it with a message, `push` = send it for review.
+
+**Avoiding conflicts:** update before you start, always work on your own branch, commit in small steps, and push as soon as you commit. If two people edit the same file, VS Code shows the clash and lets you pick **Accept Incoming** or **Accept Current** — never keep both copies of the same file. Tip: add your own file instead of editing someone else's.
 
 ## Commands (the same steps in a terminal)
 
@@ -72,13 +83,14 @@ cd Notes-SRM-VEC-Sem-3
 
 # every time you upload, in this order
 git pull                                       # 1. update first (newest notes)
-git status                                     # 2. what did I change?
+git checkout -b your-name                      # 2. your own branch (never main)
 git add EC3363-Signals-Systems/notes/Unit-2-Fourier-rahul.pdf   # 3. stage your file
 git commit -m "Add Unit 2 notes - EC3363"     # 4. save it with a message
-git push                                       # 5. send it to GitHub
+git push -u origin your-name                   # 5. send your branch
+# 6. open a pull request on GitHub; the maintainer merges
 ```
 
-- **Order matters:** pull → add → commit → push. Pulling first is what keeps you current and avoids conflicts; committing before you pull creates them.
+- **Order matters:** pull → branch → add → commit → push. Pulling first is what keeps you current and avoids conflicts; committing before you pull creates them.
 - `git add .` stages everything you changed — use it only when all the changes are yours.
 - Made a mistake in the last commit? `git reset --soft HEAD~1` undoes the commit but keeps your file; then fix and commit again.
 
@@ -89,15 +101,16 @@ VS Code doesn't run on phones, so upload in the browser. The GitHub app can't ad
 1. Open the repo, go into the subject folder, then `notes/`.
 2. Refresh the page first so you see the newest files (mobile GitHub sometimes shows an old copy).
 3. Tap **Add file → Upload files** for a PDF or photo, or **Create new file** to type a `.md` note.
-4. Pick your file, write a message, tap **Commit changes**.
+4. Pick your file, write a message, and choose **Create a new branch for this commit and start a pull request**.
+5. Tap **Commit changes**, then **Create pull request**. The maintainer merges.
 
 ![GitHub Add file button](images/github-add-file.png)
 
 If you don't see **Add file**, open the browser menu and turn on **Desktop site**.
 
-## Private repo
+## Who can merge
 
-This repo is private to classmates. Ask the owner to invite you (Settings → Collaborators), accept the email invite, then upload.
+Only the maintainer (@MDHaarith). `main` is protected: direct pushes are blocked, every change must come through a pull request, and the maintainer's review is required before it can merge.
 
 ---
 
