@@ -99,23 +99,6 @@ git config --global init.defaultBranch main
 
 Check it worked: `git config --global --list`.
 
-### 0d. Copy-paste in the terminal (read this, it bites beginners)
-
-Copying **commands** from this page into your terminal, and copying **files** into folders, are different things:
-
-**Copy a command from here → paste into terminal:**
-
-- **Windows PowerShell:** copy with `Ctrl + C` in the browser, then paste into PowerShell with `Ctrl + V` **or** right-click. Copy *out of* PowerShell with `Ctrl + Shift + C`. Warning: `Ctrl + C` *inside* a running program means "stop it" — so if something is running, use `Ctrl + Shift + C` to copy.
-- **Windows Git Bash:** paste with right-click → **Paste**, or `Ctrl + Shift + V` / `Shift + Insert`.
-- **Mac Terminal:** same as everywhere else — `Cmd + C` to copy, `Cmd + V` to paste.
-- After pasting a command, always press **Enter** to run it. If the text wraps onto two lines, delete the stray line break first.
-
-**Copy a notes file into the repo folder (for the terminal method):**
-
-- **Windows:** `Win + E` opens Explorer. Copy with `Ctrl + C`, open the subject's `notes/` folder, paste with `Ctrl + V`. Or drag-drop the file.
-- **Mac:** Finder → `Cmd + C`, go to the folder, `Cmd + V`. Or drag-drop.
-- You don't need the terminal for files at all if you use Part 1 (browser upload).
-
 ---
 
 ## Part 1 — Upload notes (browser only, no terminal)
@@ -171,9 +154,8 @@ The buttons above _are_ git. Here are the matching commands:
 git clone <repo-url>
 cd Notes-SRM-VEC-Sem-3
 
-# 2. Copy your PDF into the right folder, e.g.
+# 2. Move your PDF into the right folder, e.g.
 #    EC3363-Signals-Systems/notes/Unit-2-Fourier-rahul.pdf
-#    (use Explorer/Finder copy-paste, see 0d)
 
 # 3. Save (commit) + propose (push)
 git status                    # what changed? always look first
