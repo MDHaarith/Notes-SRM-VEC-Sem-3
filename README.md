@@ -61,6 +61,27 @@ Done. `add` = pick your file, `commit` = save it with a message, `push` = send i
 
 **Avoiding conflicts:** update before you start, commit in small steps, and push as soon as you commit. If two people edit the same file, VS Code shows the clash and lets you pick **Accept Incoming** or **Accept Current** — never keep both copies of the same file. Tip: don't edit a file someone else is working on; add your own file instead.
 
+## Commands (the same steps in a terminal)
+
+Do these **in this order**. Install Git first (see Setup). Run them from inside the repo folder.
+
+```bash
+# once, to get the repo
+git clone <repo-link>
+cd Notes-SRM-VEC-Sem-3
+
+# every time you upload, in this order
+git pull                                       # 1. update first (newest notes)
+git status                                     # 2. what did I change?
+git add EC3363-Signals-Systems/notes/Unit-2-Fourier-rahul.pdf   # 3. stage your file
+git commit -m "Add Unit 2 notes - EC3363"     # 4. save it with a message
+git push                                       # 5. send it to GitHub
+```
+
+- **Order matters:** pull → add → commit → push. Pulling first is what keeps you current and avoids conflicts; committing before you pull creates them.
+- `git add .` stages everything you changed — use it only when all the changes are yours.
+- Made a mistake in the last commit? `git reset --soft HEAD~1` undoes the commit but keeps your file; then fix and commit again.
+
 ## On a phone
 
 VS Code doesn't run on phones, so upload in the browser. The GitHub app can't add files — use **Chrome/Safari → github.com** instead.
