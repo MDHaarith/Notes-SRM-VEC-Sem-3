@@ -1,7 +1,7 @@
 # Notes-SRM-VEC-Sem-3
 
 Class notes for Sem 3, ECE (R2023) — SRM Valliammai.
-For classmates, by classmates. No git experience needed. Everything you need is on this page.
+For classmates, by classmates. No git experience needed.
 
 ## Subjects
 
@@ -21,8 +21,7 @@ Each folder has `notes/`, `question-banks/`, and `lab-manuals/` (labs only).
 ## What you (classmate) need to do
 
 1. **One-time setup (10 min):** install Python (gives you `pip`) + Git — see Part 0 below.
-2. **Upload notes (2 min, browser only):** see Part 1 below.
-3. **Optional terminal way:** see Part 2 below.
+2. **Upload notes:** clone the repo, add your file, commit, push, open a pull request — see Part 1 below.
 
 ## Git in 5 words
 
@@ -101,27 +100,32 @@ Check it worked: `git config --global --list`.
 
 ---
 
-## Part 1 — Upload notes (browser only, no terminal)
+## Part 1 — Upload notes with git
 
-This is what 90% of classmates will use. You learn git by doing it.
+**Step 1 — Get the repo once.**
 
-**Step 1 — Open the folder.** On GitHub, click a subject folder, then `notes/`. To just read: click any file to view/download.
-
-**Step 2 — Click Add file → Upload files.** Above the file list there's an **Add file** button:
-
-![GitHub "Add file → Upload files" button, outlined in orange. Official GitHub Docs screenshot.](https://docs.github.com/assets/images/help/repository/upload-files-button.png)
-
-Full guide: [Adding a file to a repository](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
-
-**Step 3 — Drag your file in.** Drag-drop your PDF (max 25 MiB per file in browser, 100 files at once) or click **choose your files**.
-
-**Step 4 — Write a commit message.** In the "Commit message" box type:
-
-```
-Add Unit-2 Laplace notes - MA3321
+```bash
+git clone <repo-url>
+cd Notes-SRM-VEC-Sem-3
 ```
 
-Verb + what + subject. That's the whole convention. More examples:
+**Step 2 — Put your file in the right folder.** Move your notes file into the subject folder, e.g. `EC3363-Signals-Systems/notes/Unit-2-Fourier-rahul.pdf`. PDFs or images are fine.
+
+**Step 3 — Check what changed.**
+
+```bash
+git status
+```
+
+**Step 4 — Save your work.**
+
+```bash
+git checkout -b my-notes                          # your own branch, once per upload
+git add EC3363-Signals-Systems/notes/Unit-2-Fourier-rahul.pdf
+git commit -m "Add Unit 2 Fourier notes - EC3363"
+```
+
+Verb + what + subject. That's the whole convention:
 
 ```
 Add Unit-2 Laplace notes - MA3321
@@ -129,47 +133,27 @@ Fix typo in EC3362 Unit-1 diode types
 Add DSD Lab Exp-3 - EC3366
 ```
 
-**Step 5 — Propose it.** Below the message, select **Create a new branch**, then click **Propose changes**:
+**Step 5 — Send it up.**
 
-![GitHub commit screen: "Commit directly" vs "Create a new branch" options.](https://docs.github.com/assets/images/help/repository/choose-commit-branch.png)
+```bash
+git push -u origin my-notes    # first push on this branch; afterwards just: git push
+```
 
-That opens a **Pull Request** — "please add my save". Click **Create pull request**:
+**Step 6 — Open a pull request.** On GitHub, click **Compare & pull request** → **Create pull request**:
 
-![GitHub yellow banner: "Compare & pull request" button.](https://docs.github.com/assets/images/help/pull_requests/pull-request-compare-pull-request.png)
+![GitHub yellow banner: "Compare & pull request" button. Official GitHub Docs screenshot.](https://docs.github.com/assets/images/help/pull_requests/pull-request-compare-pull-request.png)
 
 Full guide: [Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
-**Step 6 — Done.** A maintainer clicks Merge. Your file has history forever — who added it, when, why. That's it: commit = save point, pull request = "please add my save". Second time onwards it's the same clicks.
+**Step 7 — Done.** A maintainer clicks Merge. Your file has history forever — who added it, when, why. That's it: commit = save point, pull request = "please add my save".
 
-> Screenshots above are from the official GitHub Docs (linked under each one), so they always match the current GitHub UI.
-
----
-
-## Part 2 — Same thing in the terminal (only when curious)
-
-The buttons above _are_ git. Here are the matching commands:
+**Get classmates' latest:**
 
 ```bash
-# 1. Get the repo once
-git clone <repo-url>
-cd Notes-SRM-VEC-Sem-3
-
-# 2. Move your PDF into the right folder, e.g.
-#    EC3363-Signals-Systems/notes/Unit-2-Fourier-rahul.pdf
-
-# 3. Save (commit) + propose (push)
-git status                    # what changed? always look first
-git add EC3363-Signals-Systems/notes/Unit-2-Fourier-rahul.pdf
-git commit -m "Add Unit 2 Fourier notes - EC3363"
-git push -u origin my-notes   # first push; afterwards just: git push
-
-# 4. Get classmates' latest
 git pull
 ```
 
-Then open the repo on GitHub and click **Compare & pull request** (same screenshot as Part 1, Step 5).
-
-Undo (why git beats Drive):
+**Undo (why git beats Drive):**
 
 - Wrong file? Open the commit on GitHub → **Revert**. History keeps both versions.
 - Overwritten? **History** button on any file shows every version. Click one to download it.
@@ -181,7 +165,6 @@ Undo (why git beats Drive):
 
 - File names: `Unit-<n>-<topic>-<your-name>.pdf` (e.g. `Unit-2-Laplace-rahul.pdf`)
 - One topic per file. No `final-final-v2.pdf`.
-- Never upload: passwords, API keys, `client_secret*.json`, phone numbers.
 - Question papers go in `question-banks/`, lab work in `lab-manuals/`, not `notes/`.
 
 ## Private repo?
