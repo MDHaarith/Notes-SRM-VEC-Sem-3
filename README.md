@@ -18,6 +18,13 @@ For classmates, by classmates.
 
 Each folder has `notes/`, `question-banks/`, and `lab-manuals/` (labs only).
 
+## What you can upload
+
+- **Markdown notes** (`.md`) — typed notes; preview nicely on GitHub.
+- **PDF notes** (`.pdf`) — scanned, handwritten, or exported from Word/slides.
+
+Both are accepted. PDFs use exactly the same add → commit → push steps, in VS Code or on a phone. Keep files under ~25 MB for phone uploads (VS Code handles larger).
+
 ## Setup (once)
 
 1. **Git** — install from [git-scm.com/downloads](https://git-scm.com/downloads).
@@ -42,7 +49,7 @@ After the first time, just open that folder in VS Code — no need to clone agai
 
 ![VS Code sync button](images/vscode-sync.png)
 
-**3. Add your file.** Drag your notes file into the subject folder, e.g. `EC3363-Signals-Systems/notes/`. Name it `Unit-<n>-<topic>-<your-name>.md` (PDFs are fine too).
+**3. Add your file.** Drag your notes file into the subject folder, e.g. `EC3363-Signals-Systems/notes/`. Name it `Unit-<n>-<topic>-<your-name>.md` or `...-<your-name>.pdf` — both are accepted.
 
 **4. Commit.** In **Source Control** (`Ctrl+Shift+G`), type a message like `Add Unit 2 notes - EC3363`, and click **Commit**.
 
@@ -60,7 +67,7 @@ VS Code doesn't run on phones, so upload in the browser. The GitHub app can't ad
 
 1. Open the repo, go into the subject folder, then `notes/`.
 2. Refresh the page first so you see the newest files (mobile GitHub sometimes shows an old copy).
-3. Tap **Add file → Upload files** (or **Create new file** to type a note).
+3. Tap **Add file → Upload files** for a PDF or photo, or **Create new file** to type a `.md` note.
 4. Pick your file, write a message, tap **Commit changes**.
 
 ![GitHub Add file button](images/github-add-file.png)
