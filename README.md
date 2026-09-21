@@ -109,7 +109,7 @@ git clone <repo-url>
 cd Notes-SRM-VEC-Sem-3
 ```
 
-**Step 2 — Put your file in the right folder.** Move your notes file into the subject folder, e.g. `EC3363-Signals-Systems/notes/Unit-2-Fourier-rahul.pdf`. PDFs or images are fine.
+**Step 2 — Put your file in the right folder.** Move your notes file into the subject folder, e.g. `EC3363-Signals-Systems/notes/Unit-2-Fourier-rahul.md`. Markdown (`.md`) files are preferred; PDFs are fine too.
 
 **Step 3 — Check what changed.**
 
@@ -121,7 +121,7 @@ git status
 
 ```bash
 git checkout -b my-notes                          # your own branch, once per upload
-git add EC3363-Signals-Systems/notes/Unit-2-Fourier-rahul.pdf
+git add EC3363-Signals-Systems/notes/Unit-2-Fourier-rahul.md
 git commit -m "Add Unit 2 Fourier notes - EC3363"
 ```
 
@@ -163,7 +163,7 @@ git pull
 
 ## Rules (keep it usable)
 
-- File names: `Unit-<n>-<topic>-<your-name>.pdf` (e.g. `Unit-2-Laplace-rahul.pdf`)
+- File names: `Unit-<n>-<topic>-<your-name>.md` (e.g. `Unit-2-Laplace-rahul.md`). Markdown is preferred; PDFs are fine too.
 - One topic per file. No `final-final-v2.pdf`.
 - Question papers go in `question-banks/`, lab work in `lab-manuals/`, not `notes/`.
 
