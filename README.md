@@ -18,7 +18,7 @@ This repo is **public** — anyone can read it. To add notes, open a **pull requ
 | EC3367 | Electronics Circuits Design Laboratory | `EC3367 - Electronics Circuits Design Laboratory/` |
 | EE3369 | Circuit Theory and Electronic Devices Laboratory | `EE3369 - Circuit Theory and Electronic Devices Laboratory/` |
 
-Theory subjects have `notes/` and `question-banks/`; lab subjects have `lab-manuals/`.
+Theory subjects have `notes/` and `question-banks/`; lab subjects have `lab-manuals/`. Every subject also has its `Syllabus.md`, and the full semester list is in [Curriculum.md](Curriculum.md).
 
 ## What you can upload
 
