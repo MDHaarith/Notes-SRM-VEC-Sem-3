@@ -48,10 +48,10 @@ You need two tools: **Python (gives you `pip`)** and **Git**. Do this once.
 
 **Windows**
 
-1. Go to [python.org/downloads](https://www.python.org/downloads/) (official) **or** open the Microsoft Store and search "Python".
-2. Run the installer. Tick **"Add python.exe to PATH"** before clicking Install.
+1. **Get the installer:** go to [python.org/downloads](https://www.python.org/downloads/) (official) **or** open the Microsoft Store and search "Python".
+2. **Run it:** run the installer. Tick **"Add python.exe to PATH"** before clicking Install.
    (Store version handles PATH automatically.)
-3. Open **PowerShell** (press `Win` key, type `PowerShell`, press Enter) and check:
+3. **Verify:** open **PowerShell** (press `Win` key, type `PowerShell`, press Enter) and check:
    ```powershell
    py -3 --version
    py -3 -m pip --version
@@ -60,8 +60,8 @@ You need two tools: **Python (gives you `pip`)** and **Git**. Do this once.
 
 **Mac**
 
-1. Go to [python.org/downloads/macos](https://www.python.org/downloads/macos/) and run the macOS installer. (Alternatively `xcode-select --install` gives you system tools, but python.org is the predictable path.)
-2. Open **Terminal** (`Cmd + Space`, type `Terminal`, press Enter) and check:
+1. **Get the installer:** go to [python.org/downloads/macos](https://www.python.org/downloads/macos/) and run the macOS installer. (Alternatively `xcode-select --install` gives you system tools, but python.org is the predictable path.)
+2. **Verify:** open **Terminal** (`Cmd + Space`, type `Terminal`, press Enter) and check:
    ```bash
    python3 --version
    python3 -m pip --version
